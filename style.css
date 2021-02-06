@@ -25,12 +25,12 @@ a{
 }
 .controls{
     display: flex;
-    margin-top: 80px;
+    margin-top: 30px;
     flex-direction: column;
     align-items: center;
 }
 .controls .controls__btns{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .controls__btns button{
     all: unset;
@@ -62,5 +62,5 @@ a{
 }
 
 .controls .controls__range{
-    margin-bottom: 30px;    
+    margin-bottom: 20px;    
 }

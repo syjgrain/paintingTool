@@ -4,6 +4,7 @@ const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
+const clear = document.getElementById("jsClear");
 const INITAL_COLOR ="2c2c2c";
 const CANVAS_SIZE = 700;
 
@@ -52,10 +53,10 @@ function handelRangeChange(event){
 function handleModeClick(){
     if(filling === true){
         filling = false;
-        mode.innerText = "Fill";
+        mode.innerText = "🩸 Fill";
     }else{
         filling = true;
-        mode.innerText = "Paint";
+        mode.innerText = "✍ Paint";
         
     }
 }
@@ -78,6 +79,11 @@ function handleSaveClick(){
     link.click();
 }
 
+function handleClearClick(){
+    ctx.fillStyle ="white";
+    ctx.fillRect(0,0,CANVAS_SIZE, CANVAS_SIZE);
+}
+
 if(canvas){
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mousedown", startPainting);
@@ -98,4 +104,8 @@ if(mode){
 
 if(saveBtn){
     saveBtn.addEventListener("click", handleSaveClick);
+}
+
+if(clear){
+    clear.addEventListener("click", handleClearClick);
 }
