@@ -1,5 +1,8 @@
 body{
-    background-color: #f6f9fc;
+    background-image: url(img/flower-4865379_1920.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
